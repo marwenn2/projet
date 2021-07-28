@@ -24,7 +24,7 @@ return(
                       
                     {elem?.time}
                     </div> 
-                    <Button onClick={()=>dispatch(removefromFav(elem.id))}></Button>
+                    <Button onClick={()=>dispatch(removefromFav(elem.id))} className="btn-warning">Remove from favorits</Button>
             </div>
             </div>
             )

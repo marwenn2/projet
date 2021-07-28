@@ -37,7 +37,7 @@ return (
       <h1>Préparation</h1>
       <p> {recipe?.recipe} </p>
       <Button variant="danger" onClick={()=> handledelete()}>Delete</Button>
-      <Button onClick={()=>dispatch(addToFav(recipe))}></Button>
+      <Button onClick={()=>dispatch(addToFav(recipe))} className="btn-success">Add to favorits</Button>
       </Jumbotron>
         </Col>
         </Row>
