@@ -8,6 +8,7 @@ import AddRecipe from './components/AddRecipe';
 import Categorie from './components/Categorie';
 import Contact from './components/Contact';
 import axios from 'axios';
+import Favorites from './components/Favorites';
 function App() {
   
 const [data,setdata] = useState([]);
@@ -44,6 +45,9 @@ useEffect(()=> {
             <li> 
               <Link to="/Contact">Contact</Link>
             </li>
+            <li>
+              <Link to="/Favoris">My Favorites</Link>
+            </li>
           </ul>
          </div> 
          </div>
@@ -51,6 +55,7 @@ useEffect(()=> {
       <Route exact path="/"  ><Home data={data} recipes={recipes} setRecipes={setRecipes} /></Route>
       <Route  path="/Description/:id" ><Description data={data} /></Route>
       <Route  path="/AddRecipe" ><AddRecipe recipes={recipes}  setRecipes={setRecipes}/></Route>
+      <Route path="/Favoris" component={Favorites}></Route>
       <Route  path="/Contact" ><Contact/></Route>
       </Switch>
     </div>
